@@ -1,79 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230424 19:58:04.177" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230424 20:51:46.364" rpa="false" schemaversion="3">
 <suite id="s1" name="1 Wikipedia" source="C:\Users\vdi-student\Desktop\Robot_dla_bab\1_wikipedia.robot">
-<test id="s1-t1" name="My First Test" line="6">
+<test id="s1-t1" name="MySecondTest" line="25">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://pl.wikipedia.org</arg>
 <arg>Chrome</arg>
 <arg>executable_path=C:/chromedriver/chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230424 19:58:04.438" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
-<msg timestamp="20230424 19:58:04.438" level="INFO">Executing: C:\Users\vdi-student\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
-<status status="PASS" starttime="20230424 19:58:04.433" endtime="20230424 19:58:06.652"/>
+<msg timestamp="20230424 20:51:46.629" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
+<msg timestamp="20230424 20:51:46.629" level="INFO">Executing: C:\Users\vdi-student\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230424 20:51:46.624" endtime="20230424 20:51:48.917"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:pt-login</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230424 19:58:06.657" level="INFO">Clicking element 'id:pt-login'.</msg>
-<status status="PASS" starttime="20230424 19:58:06.656" endtime="20230424 19:58:07.245"/>
+<msg timestamp="20230424 20:51:48.919" level="INFO">Clicking element 'id:pt-login'.</msg>
+<status status="PASS" starttime="20230424 20:51:48.918" endtime="20230424 20:51:49.386"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>7</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 20:51:49.387" endtime="20230424 20:51:49.417"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:wpName1</arg>
-<arg>RobotTests</arg>
+<arg>${login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 19:58:07.246" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
-<status status="PASS" starttime="20230424 19:58:07.245" endtime="20230424 19:58:07.328"/>
+<msg timestamp="20230424 20:51:49.418" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
+<status status="PASS" starttime="20230424 20:51:49.418" endtime="20230424 20:51:49.491"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:wpPassword1</arg>
-<arg>RobotFramework</arg>
+<arg>${wrong_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 19:58:07.329" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
-<msg timestamp="20230424 19:58:07.368" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230424 19:58:07.421" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230424 19:58:07.328" endtime="20230424 19:58:07.421"/>
+<msg timestamp="20230424 20:51:49.492" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
+<msg timestamp="20230424 20:51:49.528" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230424 20:51:49.572" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230424 20:51:49.491" endtime="20230424 20:51:49.572"/>
 </kw>
 <kw name="Select Checkbox" library="SeleniumLibrary">
 <arg>id:wpRemember</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20230424 19:58:07.422" level="INFO">Selecting checkbox 'id:wpRemember'.</msg>
-<status status="PASS" starttime="20230424 19:58:07.421" endtime="20230424 19:58:07.502"/>
+<msg timestamp="20230424 20:51:49.573" level="INFO">Selecting checkbox 'id:wpRemember'.</msg>
+<status status="PASS" starttime="20230424 20:51:49.573" endtime="20230424 20:51:49.640"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:wpLoginAttempt</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230424 19:58:07.503" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
-<status status="PASS" starttime="20230424 19:58:07.502" endtime="20230424 19:58:12.463"/>
+<msg timestamp="20230424 20:51:49.647" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<status status="PASS" starttime="20230424 20:51:49.647" endtime="20230424 20:51:50.619"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:search</arg>
-<arg>Teoria Wielkiego Podrywu</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 19:58:12.464" level="INFO">Typing text 'Teoria Wielkiego Podrywu' into text field 'name:search'.</msg>
-<status status="PASS" starttime="20230424 19:58:12.463" endtime="20230424 19:58:12.559"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_error_message}</var>
+<arg>//*[@id="userloginForm"]/form/div[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230424 20:51:50.653" level="INFO">${my_error_message} = Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
+<status status="PASS" starttime="20230424 20:51:50.619" endtime="20230424 20:51:50.653"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${my_error_message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230424 20:51:50.653" level="INFO">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
+<status status="PASS" starttime="20230424 20:51:50.653" endtime="20230424 20:51:50.653"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${my_error_message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230424 20:51:50.654" endtime="20230424 20:51:50.654"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${my_error_message}</arg>
+<arg>${error_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230424 20:51:50.655" level="FAIL">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz. != Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz</msg>
+<status status="FAIL" starttime="20230424 20:51:50.655" endtime="20230424 20:51:50.655"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20230424 20:51:50.656" endtime="20230424 20:51:50.656"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230424 19:58:14.562" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 19:58:12.560" endtime="20230424 19:58:14.562"/>
+<status status="NOT RUN" starttime="20230424 20:51:50.656" endtime="20230424 20:51:50.656"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230424 19:58:14.562" endtime="20230424 19:58:16.684"/>
+<status status="NOT RUN" starttime="20230424 20:51:50.656" endtime="20230424 20:51:50.656"/>
 </kw>
-<status status="PASS" starttime="20230424 19:58:04.433" endtime="20230424 19:58:16.684"/>
+<status status="FAIL" starttime="20230424 20:51:46.624" endtime="20230424 20:51:50.657">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz. != Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz</status>
 </test>
-<status status="PASS" starttime="20230424 19:58:04.177" endtime="20230424 19:58:16.684"/>
+<status status="FAIL" starttime="20230424 20:51:46.369" endtime="20230424 20:51:50.658"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="1 Wikipedia">1 Wikipedia</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="1 Wikipedia">1 Wikipedia</stat>
 </suite>
 </statistics>
 <errors>
