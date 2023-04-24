@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230424 19:52:15.012" rpa="false" schemaversion="3">
+<suite id="s1" name="1 Wikipedia" source="C:\Users\vdi-student\Desktop\Robot_dla_bab\1_wikipedia.robot">
+<test id="s1-t1" name="My First Test" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pl.wikipedia.org</arg>
+<arg>Chrome</arg>
+<arg>executable_path=C:/chromedriver/chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230424 19:52:15.272" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
+<msg timestamp="20230424 19:52:15.272" level="INFO">Executing: C:\Users\vdi-student\AppData\Roaming\Python\Python311\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230424 19:52:15.272" endtime="20230424 19:52:17.512"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:pt-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 19:52:17.519" level="INFO">Clicking element 'id:pt-login'.</msg>
+<status status="PASS" starttime="20230424 19:52:17.518" endtime="20230424 19:52:18.115"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>RobotTests</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230424 19:52:18.117" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
+<status status="PASS" starttime="20230424 19:52:18.116" endtime="20230424 19:52:18.221"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<arg>RobotFramework</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230424 19:52:18.223" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
+<msg timestamp="20230424 19:52:18.274" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230424 19:52:18.334" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230424 19:52:18.222" endtime="20230424 19:52:18.334"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>id:wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230424 19:52:18.335" level="INFO">Selecting checkbox 'id:wpRemember'.</msg>
+<status status="PASS" starttime="20230424 19:52:18.335" endtime="20230424 19:52:18.476"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230424 19:52:18.487" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<status status="PASS" starttime="20230424 19:52:18.486" endtime="20230424 19:52:23.501"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230424 19:52:25.507" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 19:52:23.502" endtime="20230424 19:52:25.507"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230424 19:52:25.507" endtime="20230424 19:52:27.657"/>
+</kw>
+<status status="PASS" starttime="20230424 19:52:15.272" endtime="20230424 19:52:27.657"/>
+</test>
+<status status="PASS" starttime="20230424 19:52:15.017" endtime="20230424 19:52:27.657"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="1 Wikipedia">1 Wikipedia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
