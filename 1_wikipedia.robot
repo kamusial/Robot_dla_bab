@@ -11,6 +11,7 @@ My First Test
     input password  id:wpPassword1    RobotFramework
     Select Checkbox    id:wpRemember
     click button    id:wpLoginAttempt
-
+    input text    name:search    Teoria Wielkiego Podrywu
+    click button  id:searchButton
     Sleep    2
     Close browser
